@@ -7,22 +7,22 @@ local overlay for my gentoo linux machine
 how to use
 ----------
 
-0. Your system must have installed layman with 'git' USE flag. Check with
++ Your system must have installed layman with 'git' USE flag. Check with
 
     emerge -pv layman
 
-1. Add the location of overlays.xml to your layman config file.  
++ Add the location of overlays.xml to your layman config file.  
 In _/etc/layman/layman.cfg_
 
     overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml
       https://github.com/NaokiKuzumi/naokikuzumi-overlay/raw/master/overlays.xml
     
-2. Add this overlay.
++ Add this overlay.
 
     layman -S
     layman -a naokikuzumi-overlay
 
-3. Now you can emerge the packages in this overlay as usual.
++ Now you can emerge the packages in this overlay as usual.
 
 
 how to uninstall
