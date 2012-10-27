@@ -14,7 +14,7 @@ how to use
 + Add the location of overlays.xml to your layman config file.  
 In _/etc/layman/layman.cfg_
 
-    overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml
+    overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml  
       https://github.com/NaokiKuzumi/naokikuzumi-overlay/raw/master/overlays.xml
     
 + Add this overlay.
