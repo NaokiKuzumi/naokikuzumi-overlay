@@ -12,7 +12,8 @@ how to use
 
 1. Add the location of overlays.xml to your layman config file.
 
-_/etc/layman/layman.cfg_
+in _/etc/layman/layman.cfg_
+
     overlays  : http://www.gentoo.org/proj/en/overlays/repositories.xml
       https://github.com/NaokiKuzumi/naokikuzumi-overlay/raw/master/overlays.xml
     
