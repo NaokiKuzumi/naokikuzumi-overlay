@@ -8,6 +8,7 @@ how to use
 ----------
 
 0. Your system must have installed layman with 'git' USE flag. Check with
+
     emerge -pv layman
 
 1. Add the location of overlays.xml to your layman config file.
