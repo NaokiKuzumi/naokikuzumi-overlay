@@ -19,7 +19,7 @@ in _/etc/layman/layman.cfg_
     
 2. Add this overlay.
 
-    layman -S 
+    layman -S
     layman -a naokikuzumi-overlay
 
 3. Now you can emerge the packages in this overlay as usual.
