@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE repositories SYSTEM "/dtd/repositories.dtd">
+<repositories xmlns="" version="1.0">
+<repo quality="experimental" status="unofficial">
+    <name>naokikuzumi-overlay</name>
+    <description>kudzunaoki's overlay</description>
+    <homepage>https://github.com/NaokiKuzumi/naokikuzumi-overlay</homepage>
+    <owner>
+        <email>kudzunaoki@gmail.com</email>
+        <name>Naoki Kuzumi</name>
+    </owner>
+    <source type="git">git://github.com/NaokiKuzumi/naokikuzumi-overlay.git</source>
+</repo>
+</repositories>
