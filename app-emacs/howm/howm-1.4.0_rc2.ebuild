@@ -9,6 +9,7 @@ inherit elisp
 DESCRIPTION="Note-taking tool on Emacs"
 HOMEPAGE="http://howm.sourceforge.jp/"
 SRC_URI="http://howm.sourceforge.jp/a/${PN}-1.4.0rc2.tar.gz"
+S="${WORKDIR}/${PN}-1.4.0rc2"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -19,7 +20,6 @@ SITEFILE="50${PN}-gentoo.el"
 
 src_configure() {
 	econf --with-docdir="${EPREFIX}/usr/share/doc/${PF}"
-	S="${WORKDIR}/${PN}-1.4.0rc2"
 }
 
 src_compile() {
