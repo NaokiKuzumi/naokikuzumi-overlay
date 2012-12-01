@@ -19,7 +19,7 @@ SITEFILE="50${PN}-gentoo.el"
 
 src_configure() {
 	econf --with-docdir="${EPREFIX}/usr/share/doc/${PF}"
-	S=${WORKDIR}/${PN}-1.4.0rc2
+	S="${WORKDIR}/${PN}-1.4.0rc2"
 }
 
 src_compile() {
