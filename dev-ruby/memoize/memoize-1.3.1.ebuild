@@ -15,4 +15,5 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
+ruby_add_rdepend "virtual/ruby-test-unit"
 ruby_add_bdepend "virtual/ruby-test-unit"
