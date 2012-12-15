@@ -45,7 +45,7 @@ all_ruby_install() {
 	exeinto /usr/share/mikutter
 	doexe mikutter.rb
 	insinto /usr/share/mikutter
-	doins -r core plugin vendor
+	doins -r core plugin
 	exeinto /usr/bin
 	doexe "${FILESDIR}"/mikutter
 	dodoc README
