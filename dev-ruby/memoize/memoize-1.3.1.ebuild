@@ -15,4 +15,6 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
+RUBY_FAKEGEM_EXTRADOC="README"
+
 ruby_add_rdepend "virtual/ruby-test-unit"
