@@ -15,6 +15,4 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-ruby_add_rdepend "dev-ruby/bundler dev-ruby/jeweler dev-ruby/rcov dev-ruby/rspec"
-#ruby_add bdepend
 
