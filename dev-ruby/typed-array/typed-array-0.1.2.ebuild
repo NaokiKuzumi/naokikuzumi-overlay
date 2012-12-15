@@ -15,4 +15,4 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
-
+RUBY_FAKEGEM_GEMSPEC="typed-array.gemspec"
