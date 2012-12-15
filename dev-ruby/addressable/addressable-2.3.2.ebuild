@@ -17,3 +17,6 @@ SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
 
+each_ruby_install() {
+	doins -r data
+}
