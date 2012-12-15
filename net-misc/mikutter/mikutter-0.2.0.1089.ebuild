@@ -32,7 +32,12 @@ RDEPEND="libnotify? ( x11-libs/libnotify )
 ruby_add_rdepend "dev-ruby/ruby-gtk2
 	dev-ruby/rcairo
 	dev-ruby/httpclient
-	virtual/ruby-ssl"
+	virtual/ruby-ssl
+	dev-ruby/bsearch
+	dev-ruby/oauth
+	dev-ruby/addressable
+	dev-ruby/memoize
+	dev-ruby/typed-array"
 
 S="${WORKDIR}/${PN}"
 
