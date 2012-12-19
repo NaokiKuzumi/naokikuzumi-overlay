@@ -1,6 +1,6 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/mikutter/mikutter-9999.ebuild,v 1.3 2011/12/18 01:03:30 naota Exp $
+# $Header: $
 
 EAPI=3
 
@@ -32,14 +32,14 @@ RDEPEND="libnotify? ( x11-libs/libnotify )
 ruby_add_rdepend "dev-ruby/ruby-gtk2
 	dev-ruby/rcairo
 	dev-ruby/httpclient
-	virtual/ruby-ssl"
+	virtual/ruby-ssl
+	dev-ruby/bsearch
+	dev-ruby/oauth
+	dev-ruby/addressable
+	dev-ruby/memoize
+	dev-ruby/typed-array"
 
 S="${WORKDIR}/${PN}"
-
-src_prepare() {
-	cd "${WORKDIR}"
-	mv mikutter all
-}
 
 all_ruby_install() {
 	exeinto /usr/share/mikutter
