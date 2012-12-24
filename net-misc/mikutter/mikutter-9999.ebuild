@@ -47,6 +47,9 @@ all_ruby_install() {
 	insinto /usr/share/mikutter
 	doins -r core plugin
 	exeinto /usr/bin
-	doexe "${FILESDIR}"/mikutter
+	doexe "${FILESDIR}"/mikutter	
+	if [ "${PV}" == "9999" ]; then
+	   doexe "${FILESDIR}"/mikutter-debug
+	fi	
 	dodoc README
 }
