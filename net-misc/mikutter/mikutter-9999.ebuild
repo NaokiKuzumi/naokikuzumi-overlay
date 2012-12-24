@@ -48,8 +48,8 @@ all_ruby_install() {
 	doins -r core plugin
 	exeinto /usr/bin
 	doexe "${FILESDIR}"/mikutter	
-	if [ "${PV}" == "9999" ]; then
-	   doexe "${FILESDIR}"/mikutter-debug
-	fi	
+#	if [ "${PV}" == "9999" ]; then
+#	   doexe "${FILESDIR}"/mikutter-debug
+#	fi	
 	dodoc README
 }
