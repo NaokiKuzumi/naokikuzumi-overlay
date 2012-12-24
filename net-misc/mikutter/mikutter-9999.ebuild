@@ -41,6 +41,11 @@ ruby_add_rdepend "dev-ruby/ruby-gtk2
 
 S="${WORKDIR}/${PN}"
 
+src_prepare() {
+	cd "${WORKDIR}"
+	mv mikutter all
+}
+
 all_ruby_install() {
 	exeinto /usr/share/mikutter
 	doexe mikutter.rb
@@ -48,8 +53,8 @@ all_ruby_install() {
 	doins -r core plugin
 	exeinto /usr/bin
 	doexe "${FILESDIR}"/mikutter	
-#	if [ "${PV}" == "9999" ]; then
-#	   doexe "${FILESDIR}"/mikutter-debug
-#	fi	
+	if [ "${PV}" == "9999" ]; then
+	   doexe "${FILESDIR}"/mikutter-debug
+	fi	
 	dodoc README
 }
