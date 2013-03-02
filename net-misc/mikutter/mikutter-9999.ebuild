@@ -48,5 +48,7 @@ each_ruby_install() {
 	doins -r core plugin
 	exeinto /usr/bin
 	doexe "${FILESDIR}"/mikutter
+	doicon core/skin/data/icon.png
+	make_desktop_entry "mikutter" "mikutter" "icon.png"
 	dodoc README
 }
