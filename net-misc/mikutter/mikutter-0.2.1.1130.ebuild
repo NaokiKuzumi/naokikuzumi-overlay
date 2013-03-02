@@ -48,5 +48,6 @@ each_ruby_install() {
 	doins -r core plugin
 	exeinto /usr/bin
 	doexe "${FILESDIR}"/mikutter
+	make_desktop_entry "mikutter" 
 	dodoc README
 }
