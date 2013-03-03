@@ -9,15 +9,13 @@ USE_RUBY="ruby19"
 inherit ruby-ng
 
 if [ "${PV}" = "9999" ]; then
-	inherit git
-	EGIT_REPO_URI="git://toshia.dip.jp/mikutter.git"
-	#S="${EGIT_UNPACK_DIR}"
-	echo "S=[$S]"
+	ESVN_REPO_URI="svn://toshia.dip.jp/mikutter/trunk"
+	inherit subversion
+	KEYWORDS=""
 else
 	MY_P="${PN}.${PV}"
 	SRC_URI="http://mikutter.hachune.net/bin/${MY_P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
-	S="${WORKDIR}/${PN}"
 fi
 
 DESCRIPTION="mikutter is simple, powerful and moeful twitter client"
@@ -30,6 +28,7 @@ IUSE="+libnotify sound"
 DEPEND=""
 RDEPEND="libnotify? ( x11-libs/libnotify )
 	sound? ( media-sound/alsa-utils )"
+S="${WORKDIR}/${PN}"
 
 ruby_add_rdepend "dev-ruby/ruby-gtk2
 	dev-ruby/rcairo
