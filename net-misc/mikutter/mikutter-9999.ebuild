@@ -13,6 +13,7 @@ if [ "${PV}" = "9999" ]; then
 	EGIT_REPO_URI="git://toshia.dip.jp/mikutter.git"
 	EGIT_BRANCH="master"
 	S="${EGIT_STORE_DIR}"
+	echo $S
 else
 	MY_P="${PN}.${PV}"
 	SRC_URI="http://mikutter.hachune.net/bin/${MY_P}.tar.gz"
