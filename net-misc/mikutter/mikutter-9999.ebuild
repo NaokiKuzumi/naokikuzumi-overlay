@@ -11,7 +11,7 @@ inherit ruby-ng
 if [ "${PV}" = "9999" ]; then
 	inherit git
 	EGIT_REPO_URI="git://toshia.dip.jp/mikutter.git"
-	S="${EGIT_UNPACK_DIR}"
+	#S="${EGIT_UNPACK_DIR}"
 	echo "S=[$S]"
 else
 	MY_P="${PN}.${PV}"
