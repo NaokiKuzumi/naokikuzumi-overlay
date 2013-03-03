@@ -12,10 +12,12 @@ if [ "${PV}" = "9999" ]; then
 	inherit git-2
 	EGIT_REPO_URI="git://toshia.dip.jp/mikutter.git"
 	EGIT_BRANCH="master"
+	S="${EGIT_STORE_DIR}/${PN}"
 else
 	MY_P="${PN}.${PV}"
 	SRC_URI="http://mikutter.hachune.net/bin/${MY_P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
+	S="${WORKDIR}/${PN}"
 fi
 
 DESCRIPTION="mikutter is simple, powerful and moeful twitter client"
@@ -39,7 +41,6 @@ ruby_add_rdepend "dev-ruby/ruby-gtk2
 	dev-ruby/memoize
 	dev-ruby/typed-array"
 
-S="${WORKDIR}/${PN}"
 
 each_ruby_install() {
 	exeinto /usr/share/mikutter
