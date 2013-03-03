@@ -9,10 +9,9 @@ USE_RUBY="ruby19"
 inherit ruby-ng
 
 if [ "${PV}" = "9999" ]; then
-	inherit git
-	EGIT_REPO_URI="git://toshia.dip.jp/mikutter.git"
-	#S="${EGIT_UNPACK_DIR}"
-	echo "S=[$S]"
+	ESVN_REPO_URI="svn://toshia.dip.jp/mikutter/trunk"
+	inherit subversion
+	KEYWORDS=""
 else
 	MY_P="${PN}.${PV}"
 	SRC_URI="http://mikutter.hachune.net/bin/${MY_P}.tar.gz"
