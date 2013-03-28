@@ -1,21 +1,23 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI=3
+EAPI=5
 
 USE_RUBY="ruby19"
 
-inherit ruby-ng
+inherit eutils ruby-ng
 
 if [ "${PV}" = "9999" ]; then
-	ESVN_REPO_URI="svn://toshia.dip.jp/mikutter/trunk"
-	inherit subversion
+	EGIT_REPO_URI="git://toshia.dip.jp/mikutter.git"
+	inherit git-2
 	KEYWORDS=""
+	EGIT_SOURCEDIR="${WORKDIR}/all"
 else
 	MY_P="${PN}.${PV}"
 	SRC_URI="http://mikutter.hachune.net/bin/${MY_P}.tar.gz"
 	KEYWORDS="~amd64 ~x86"
+	RUBY_S="${PN}"
 fi
 
 DESCRIPTION="mikutter is simple, powerful and moeful twitter client"
@@ -28,27 +30,31 @@ IUSE="+libnotify sound"
 DEPEND=""
 RDEPEND="libnotify? ( x11-libs/libnotify )
 	sound? ( media-sound/alsa-utils )"
-S="${WORKDIR}/${PN}"
 
 ruby_add_rdepend "dev-ruby/ruby-gtk2
-	dev-ruby/rcairo
-	dev-ruby/httpclient
-	virtual/ruby-ssl
-	dev-ruby/bsearch
-	dev-ruby/oauth
 	dev-ruby/addressable
+	>=dev-ruby/bsearch-1.5.0
+	dev-ruby/json
 	dev-ruby/memoize
-	dev-ruby/typed-array"
+	>=dev-ruby/oauth-0.4.7
+	dev-ruby/typed-array
+	virtual/ruby-ssl"
 
+all_ruby_unpack() {
+	if [ "${PV}" = "9999" ]; then
+		git-2_src_unpack
+	else
+		default
+	fi
+}
 
-each_ruby_install() {
+all_ruby_install() {
 	exeinto /usr/share/mikutter
 	doexe mikutter.rb
 	insinto /usr/share/mikutter
 	doins -r core plugin
 	exeinto /usr/bin
 	doexe "${FILESDIR}"/mikutter
-	doicon core/skin/data/icon.png
-	make_desktop_entry "mikutter" "mikutter" "icon.png"
 	dodoc README
+	make_desktop_entry mikutter Mikutter /usr/share/mikutter/core/skin/data/icon.png
 }
