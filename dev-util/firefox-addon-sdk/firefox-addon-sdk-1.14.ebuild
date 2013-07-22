@@ -26,14 +26,13 @@ src_unpack(){
 }
 
 src_install(){
-	dodir /usr/share/firefox-addon-sdk/
-	echo "cp -R ${S}/ ${D}/hoge" 
-	echo "Install failed!"
-	cp -R "${S}/" "${D}/usr/share/firefox-addon-sdk/" | die "Install failed!"
+	dodir /usr/share/firefox-addon-sdk
+	insinto /usr/share/firefox-addon-sdk
+	doins -r "${S}/"
 }
 
 pkg_postinst(){
-	exeinto /usr/bin/firefox-sdk-activate
+	exeinto /usr/bin
 	doexe "${FILESDIR}"/firefox-addon-sdk-activate
 	doexe "${FILESDIR}"/firefox-addon-sdk-deactivate
 }
