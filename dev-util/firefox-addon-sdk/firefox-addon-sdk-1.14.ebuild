@@ -15,7 +15,7 @@ LICENSE="MPL-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
-S="${WORKDIR}/${DLNAME}"
+S="${WORKDIR}/addon-sdk-${PV}"
 
 PYTHON_DEPEND="<<2:2.5>> app-arch/unzip"
 
