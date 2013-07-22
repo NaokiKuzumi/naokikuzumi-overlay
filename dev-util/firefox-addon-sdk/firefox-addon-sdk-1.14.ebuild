@@ -29,7 +29,7 @@ src_install(){
 	#dodir /usr/share/firefox-addon-sdk/
 	#insinto /usr/share/firefox-addon-sdk
 	#doins -r "${S}/" 
-	cp -R "${S}/" /usr/share/firefox-addon-sdk
+	cp -R "${S}/" "${D}/usr/share/firefox-addon-sdk"
 	exeinto /usr/bin
 	doexe "${FILESDIR}"/firefox-addon-sdk-activate
 }
