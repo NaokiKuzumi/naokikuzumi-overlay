@@ -1,2 +1,3 @@
 #!/bin/bash
-pushd /usr/share/firefox-addon-sdk && ./bin/activate && popd
+echo "To start sdk environment, Do the following command."
+echo "pushd /usr/share/firefox-addon-sdk/ && source ./bin/activate && popd"
