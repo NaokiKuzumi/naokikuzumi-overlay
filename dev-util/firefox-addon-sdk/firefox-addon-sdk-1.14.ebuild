@@ -27,9 +27,9 @@ src_unpack(){
 
 src_install(){
 	dodir /usr/share/firefox-addon-sdk/
-	echo "cp -R ${S}/ ${D}" 
+	echo "cp -R ${S}/ ${D}/hoge" 
 	echo "Install failed!"
-	cp -R "${S}/" "${D}" | die "Install failed!"
+	cp -R "${S}/" "${D}/usr/share/firefox-addon-sdk/" | die "Install failed!"
 }
 
 pkg_postinst(){
