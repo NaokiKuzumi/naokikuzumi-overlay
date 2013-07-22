@@ -27,9 +27,9 @@ src_unpack(){
 
 src_install(){
 	dodir /usr/share/firefox-addon-sdk/
-	echo "cp -R ${S}/ ${D}/" 
-	echo die "Install failed!"
-	cp -R "${S}/" "${D}/" | die "Install failed!"
+	echo "cp -R ${S}/ ${D}" 
+	echo "Install failed!"
+	cp -R "${S}/" "${D}" | die "Install failed!"
 }
 
 pkg_postinst(){
