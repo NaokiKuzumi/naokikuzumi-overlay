@@ -26,10 +26,11 @@ src_unpack(){
 }
 
 src_install(){
-	#dodir /usr/share/firefox-addon-sdk/
+	dodir /usr/share/
 	#insinto /usr/share/firefox-addon-sdk
 	#doins -r "${S}/" 
-	cp -R "${S}/" "${D}/usr/share/firefox-addon-sdk"
+	cp -R "${S}/" "${D}/usr/share/firefox-addon-sdk" | die "failed to copy to
+	${D}"
 	exeinto /usr/bin
 	doexe "${FILESDIR}"/firefox-addon-sdk-activate
 }
