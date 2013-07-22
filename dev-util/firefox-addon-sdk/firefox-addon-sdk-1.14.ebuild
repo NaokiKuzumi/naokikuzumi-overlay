@@ -29,10 +29,6 @@ src_install(){
 	dodir /usr/share/firefox-addon-sdk
 	insinto /usr/share/firefox-addon-sdk
 	doins -r "${S}/"
-}
-
-pkg_postinst(){
 	exeinto /usr/bin
 	doexe "${FILESDIR}"/firefox-addon-sdk-activate
-	doexe "${FILESDIR}"/firefox-addon-sdk-deactivate
 }
