@@ -18,7 +18,7 @@ PYTHON_DEPEND="<<2:2.5>> app-arch/unzip"
 RDEPEND="${DEPEND}"
 
 src_unpack(){
-	unpack addon-sdk-${PV}.zip
+	unpack jetpack-sdk-latest.zip
 }
 
 src_install(){
