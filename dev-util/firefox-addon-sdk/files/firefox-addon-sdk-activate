@@ -1,0 +1,2 @@
+#!/bin/bash
+pushd /usr/share/firefox-addon-sdk && ./activate && popd
