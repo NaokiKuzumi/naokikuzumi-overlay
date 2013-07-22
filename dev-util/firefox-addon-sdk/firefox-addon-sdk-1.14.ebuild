@@ -18,7 +18,7 @@ PYTHON_DEPEND="<<2:2.5>> app-arch/unzip"
 RDEPEND="${DEPEND}"
 
 src_unpack(){
-	unpack addon-sdk-${PV}
+	unpack addon-sdk-${PV}.zip
 }
 
 src_install(){
