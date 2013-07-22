@@ -26,9 +26,8 @@ src_unpack(){
 }
 
 src_install(){
-	dodir /usr/share/firefox-addon-sdk
-	insinto /usr/share/firefox-addon-sdk
-	doins -r "${S}/"
+	insinto /usr/share/
+	newins -r "${S}/" firefox-addon-sdk
 	exeinto /usr/bin
 	doexe "${FILESDIR}"/firefox-addon-sdk-activate
 }
