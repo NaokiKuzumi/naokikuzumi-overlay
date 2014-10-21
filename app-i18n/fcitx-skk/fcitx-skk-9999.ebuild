@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit eutils git-r3
+inherit eutils git-r3 cmake-utils
 
 EGIT_REPO_URI="https://github.com/fcitx/fcitx-skk.git"
 
@@ -17,6 +17,7 @@ SLOT="0"
 IUSE="qt4"
 
 DEPEND="dev-util/cmake"
-RDEPEND="app-i18n/fcitx app-i18n/libskk app-i18n/skk-jisyo 
-		 qt4? ( dev-qt/qtcore:4 )"
+RDEPEND="app-i18n/fcitx[qt4]
+	app-i18n/libskk
+	app-i18n/skk-jisyo"
 
