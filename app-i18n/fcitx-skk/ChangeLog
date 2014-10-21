@@ -1,0 +1,7 @@
+# ChangeLog for app-i18n/fcitx-skk
+# Copyright 1999-2014 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*fcitx-skk-9999 (22 Oct 2014)
+	22 Oct 2014; +fcitx-skk-9999.ebuild:
+	Initial ebuild.
