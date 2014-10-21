@@ -16,6 +16,7 @@ SLOT="0"
 
 IUSE="qt4"
 
-DEPEND=""
-RDEPEND="app-i18n/fcitx app-i18n/libskk app-i18n/skk-jisyo"
+DEPEND="dev-util/cmake"
+RDEPEND="app-i18n/fcitx app-i18n/libskk app-i18n/skk-jisyo 
+		 qt4? ( dev-qt/qtcore:4 )"
 
